@@ -66,6 +66,8 @@ def magick_image_to_ico(input_image_path: Path, output_ico_path: Path) -> None:
   except CalledProcessError as e:
     raise RuntimeError(f'ImageMagick ICO creation failed: {e}')
 
+  # TODO: Delete temp PNG file after conversion
+
 if __name__ == '__main__':
   import sys
 
@@ -76,5 +78,12 @@ if __name__ == '__main__':
   input_image_path = Path(sys.argv[1])
   output_ico_path = Path(sys.argv[2])
 
-  image_to_ico(input_image_path, output_ico_path)
+  # Use Pillow method for conversion
+  # TODO: This still procuces stretched icons in Windows Explorer.
+  #       Need to find a way to preserve aspect ratio and correct image size for "extra large icon" in Windows Explorer.
+  # image_to_ico(input_image_path, output_ico_path)
+
+  # Use ImageMagick method for conversion, which produces better results.
+  magick_image_to_ico(input_image_path, output_ico_path)
+
   print(f'Converted {input_image_path} to {output_ico_path}')
