@@ -6,7 +6,7 @@ Convert input image file to ICO file.
 
 * Keep image aspect ratio
 * Keep image transparency if exists
-* Create most compatible ICO file possible
+* Create most compatible ICO file possible for Windows 10 and 11 Explorer
 
 ## Dependencies
 

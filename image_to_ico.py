@@ -2,7 +2,9 @@
 # -*- coding: utf-8 -*-
 
 '''
-Convert input image to .ico format for Windows executables
+Convert input image to .ico format for Windows Explorer icons.
+Uses Pillow library for conversion, but also includes an alternative method using
+ImageMagick command line tool for better quality and aspect ratio preservation.
 '''
 
 import os
