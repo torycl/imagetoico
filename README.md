@@ -10,8 +10,18 @@ Convert input image file to ICO file.
 
 ## Dependencies
 
+### Python dependencies
+
 ```sh
 pip install -r requirements.txt
 ```
 
-You can also install [Image Magick](https://imagemagick.org/) software. It may generate better results than Pillow library in Python.
+### Image magick
+
+Install [Image Magick](https://imagemagick.org/) software. It may generate better results than Pillow library in Python.
+
+On Windows:
+
+```
+winget install ImageMagick.ImageMagick
+```
